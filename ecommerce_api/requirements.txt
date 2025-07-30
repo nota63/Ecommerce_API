@@ -1,0 +1,12 @@
+Django>=4.2.0
+djangorestframework>=3.14.0
+django-filter>=23.2
+django-cors-headers>=4.0.0
+redis>=4.5.0
+django-redis>=5.2.0
+psycopg2-binary>=2.9.0  # For PostgreSQL
+Pillow>=9.5.0  # For image handling
+celery>=5.2.0  # For background tasks
+python-decouple>=3.8  # For environment variables
+dj-database-url>=2.0.0  # For database URL parsing
+gunicorn>=20.1.0  # For production deployment
