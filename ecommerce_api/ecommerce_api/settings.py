@@ -86,14 +86,6 @@ WSGI_APPLICATION = 'ecommerce_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -136,15 +128,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ============================================REST FRAMEWORK SETUP=========================================================================
-
-# JWT Setup
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'rest_framework_simplejwt.authentication.JWTAuthentication',
-#     ),
-# }
-
-
 
 # REST Framework configuration
 REST_FRAMEWORK = {
@@ -211,21 +194,21 @@ CACHE_SETTINGS = {
 }
 
 
-# Database optimization
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',  # Recommended for production
-#         'NAME': 'ecommerce_db',
-#         'USER': 'your_db_user',
-#         'PASSWORD': 'your_db_password',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'MAX_CONNS': 20,
-#             'CONN_MAX_AGE': 600,  # Connection pooling
-#         }
-#     }
-# }
+# Database optimization - Postgresql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'ecommerce_db',
+        'USER': '-----',
+        'PASSWORD': '----',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'OPTIONS': {
+            'MAX_CONNS': 20,
+            'CONN_MAX_AGE': 600,  
+        }
+    }
+}
 
 
 # Session configuration for cart functionality
