@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.text import slugify
 import uuid
-
+from django.db.models.signals import post_save, pre_save
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)

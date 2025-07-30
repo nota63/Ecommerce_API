@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'product',
     'django_filters',
     'corsheaders', 
+    'channels',
+    'daphne',
+    'notifications',
 ]
 
 MIDDLEWARE = [
@@ -263,6 +266,18 @@ LOGGING = {
             'handlers': ['file', 'console'],
             'level': 'INFO',
             'propagate': True,
+        },
+    },
+}
+
+
+# =============================== CHANNELS CONFIGURATION ===============================================================
+# CHANNEL LAYER
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
         },
     },
 }

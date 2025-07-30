@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.core.cache import cache
-from your_app.models import Product, Category, Brand
-from your_app.serializers import ProductListSerializer, CategorySerializer, BrandSerializer
+from product.models import Product, Category, Brand
+from product.serializers import ProductListSerializer, CategorySerializer, BrandSerializer
 
 
 class Command(BaseCommand):
